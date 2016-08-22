@@ -1,0 +1,16 @@
+<nav>
+  <ul class="pager">
+
+    {{#if data.prevPage}}
+      <li class="previous">{{#link-to "page" data.prevPage}}<span aria-hidden="true">&larr;</span> Prev{{/link-to}}</li>
+    {{else}}
+      <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Prev</a></li>
+    {{/if}}
+
+    {{#if data.nextPage}}
+      <li class="next">{{#link-to "page" data.nextPage}}Next <span aria-hidden="true">&rarr;</span>{{/link-to}}</li>
+    {{else}}
+      <li class="next disabled"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
+    {{/if}}
+  </ul>
+</nav>
